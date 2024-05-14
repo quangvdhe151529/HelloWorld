@@ -10,5 +10,7 @@
     <ListView
         android:id="@+id/slot3listview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp"/>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
