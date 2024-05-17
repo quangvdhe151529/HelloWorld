@@ -1,17 +1,18 @@
 package slot4;
 
-public class Demo41Student {
+public class T41Contact {
     private String ten;
     private String tuoi;
+
     private int hinh;
 
-    public Demo41Student(String ten, String tuoi, int hinh) {
+    public T41Contact() {
+    }
+
+    public T41Contact(String ten, String tuoi, int hinh) {
         this.ten = ten;
         this.tuoi = tuoi;
         this.hinh = hinh;
-    }
-
-    public Demo41Student() {
     }
 
     public String getTen() {
