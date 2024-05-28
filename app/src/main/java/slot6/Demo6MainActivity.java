@@ -40,10 +40,7 @@ public class Demo6MainActivity extends AppCompatActivity {
         btnXoa=findViewById(R.id.demo61BtnDelete);
         lv = findViewById(R.id.demo61lv);
         sanPhamDAO=new SanPhamDAO(this);
-        ds.clear();
-        ds=sanPhamDAO.getAllProductToString();
-        arrayAdapter=new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,ds);
-        lv.setAdapter(arrayAdapter);
+
         btnThem.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View v){
@@ -86,12 +83,22 @@ public class Demo6MainActivity extends AppCompatActivity {
                 int kq = sanPhamDAO.updateProduct(s);
                 if(kq==-1){
                     Toast.makeText(getApplicationContext(),
-                            "Xoa that bai",Toast.LENGTH_LONG).show();
+                            "Sua that bai",Toast.LENGTH_LONG).show();
                 }
                 if(kq==1){
                     Toast.makeText(getApplicationContext(),
-                            "Xoa thanh cong",Toast.LENGTH_LONG).show();
+                            "Sua thanh cong",Toast.LENGTH_LONG).show();
                 }
+            }
+        });
+        btnLoad.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                ds.clear();
+                ds=sanPhamDAO.getAllProductToString();
+                arrayAdapter=new ArrayAdapter<>(Demo6MainActivity.this,
+                        android.R.layout.simple_list_item_1,ds);
+                lv.setAdapter(arrayAdapter);
             }
         });
     }
