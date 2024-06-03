@@ -13,6 +13,18 @@
         android:theme="@style/Theme.HelloWorld"
         tools:targetApi="31">
         <activity
+            android:name="slot8.Demo82MainActivity"
+            android:exported="false" />
+        <activity
+            android:name="slot8.Demo81MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="slot6.Demo6MainActivity"
             android:exported="true">
             <intent-filter>
